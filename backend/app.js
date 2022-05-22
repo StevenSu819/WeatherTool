@@ -152,7 +152,7 @@ app.get('/api/citylist',function(req,res){
   const inputText = req.query.text;
     (async () => {
       try {
-        const response = await got('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ inputText + '&components=country:us&types=(cities)&key=AIzaSyBQS3aGQMFJMRtBI5PVjogIWIzQCC6hsko');
+        const response = await got('https://maps.googleapis.com/maps/api/place/autocomplete/json?input='+ inputText + '&components=country:us&types=(cities)&key=');
         let body = JSON.parse(response.body);
         let prediction = body.predictions;
         let city = [];
@@ -181,7 +181,7 @@ app.get('/api/citylist',function(req,res){
 //       input: inputText,
 //       components: 'country:us',
 //       types: '(cities)',
-//       key: 'AIzaSyBQS3aGQMFJMRtBI5PVjogIWIzQCC6hsko'
+//       key: ''
 //     }
 //   });
 //   pipeline(dataStream, res, (err) => {
@@ -204,7 +204,7 @@ app.get('/api/hour',function(req,res){
     console.log(url);
     url = url + '&timesteps=' + '1h';
     url = url + '&units=imperial&timezone=America/Los_Angeles';
-    url = url + '&apikey=' + 'SQt1c6WRv87CVfrjX2S8s8R3SQdNScN6';
+    url = url + '&apikey=' + '';
     console.log(url);
     (async () => {
         try {
@@ -271,7 +271,7 @@ app.get('/api/current',function(req,res){
     console.log(url);
     url = url + '&timesteps=' + 'current';
     url = url + '&units=imperial&timezone=America/Los_Angeles';
-    url = url + '&apikey=' + 'SQt1c6WRv87CVfrjX2S8s8R3SQdNScN6';
+    url = url + '&apikey=' + '';
     console.log(url);
     (async () => {
         try {
@@ -331,7 +331,7 @@ app.get('/api/weather',function(req,res){
     console.log(url);
     url = url + '&timesteps=' + '1d';
     url = url + '&units=imperial&timezone=America/Los_Angeles';
-    url = url + '&apikey=' + 'SQt1c6WRv87CVfrjX2S8s8R3SQdNScN6';
+    url = url + '&apikey=' + '';
     console.log(url);
     (async () => {
         try {
